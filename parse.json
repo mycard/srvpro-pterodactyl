@@ -1,0 +1,11 @@
+{
+	"config/config.json": {
+		"parser": "json",
+		"find": {
+			"port": "{{server.build.default.port}}",
+			"modules.welcome": "{{env.WELCOME}}",
+			"modules.windbot.spawn": true,
+			"modules.http.port": "{{env.HTTP_PORT}}"
+		}
+	}
+}
