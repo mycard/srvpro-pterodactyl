@@ -3,7 +3,7 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-08-30T05:20:24+00:00",
+    "exported_at": "2019-08-30T05:32:32+00:00",
     "name": "SRVPro",
     "author": "unknown@unknown.com",
     "description": "A YGOPro Server.",
@@ -17,7 +17,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\ncd \/mnt\/server\r\nmv \/ygopro-server\/* .\r\nmv \/ygopro-server\/.git* .\r\nmv \/ygopro-server\/.dockerignore .\r\nmkdir config plugins decks replays\r\ncp data\/default_config.json config\/config.json",
+            "script": "#!\/bin\/bash\r\ncd \/mnt\/server\r\nmv \/ygopro-server\/* .\r\nmv \/ygopro-server\/.git* .\r\nmv \/ygopro-server\/.dockerignore .\r\nmkdir config plugins decks replays\r\ncp data\/default_config.json config\/config.json\r\nrm windbot\/cards.cdb\r\ncp ygopro\/cards.cdb windbot\/",
             "container": "mycard\/ygopro-server:latest",
             "entrypoint": "bash"
         }
