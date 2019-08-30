@@ -3,7 +3,7 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-08-29T04:12:12+00:00",
+    "exported_at": "2019-08-30T05:20:24+00:00",
     "name": "SRVPro",
     "author": "unknown@unknown.com",
     "description": "A YGOPro Server.",
@@ -17,8 +17,8 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\napt update\r\napt -y install git wget build-essential libevent-dev libsqlite3-dev mono-complete\r\n\r\ngit clone https:\/\/github.com\/moecube\/srvpro \/mnt\/server\r\ncd \/mnt\/server\r\nnpm ci\r\nmkdir config plugins decks replays\r\ncp data\/default_config.json config\/config.json\r\n\r\ngit clone https:\/\/github.com\/moecube\/ygopro --branch=server --recursive\r\ncd ygopro\/\r\ngit submodule foreach git checkout master\r\nwget -O - https:\/\/github.com\/premake\/premake-core\/releases\/download\/v5.0.0-alpha13\/premake-5.0.0-alpha13-linux.tar.gz | tar zfx -\r\n.\/premake5 gmake\r\ncd build\/\r\nmake config=release\r\ncd ..\r\nln -s bin\/release\/ygopro .\/\r\nstrip ygopro\r\nmkdir replay\r\ncd ..\r\n\r\ngit clone https:\/\/github.com\/moecube\/windbot\r\ncd windbot\r\nxbuild \/property:Configuration=Release \/property:TargetFrameworkVersion=v4.5\r\nln -s bin\/Release\/WindBot.exe .\r\nln -s ..\/ygopro\/cards.cdb .",
-            "container": "node:12-stretch-slim",
+            "script": "#!\/bin\/bash\r\ncd \/mnt\/server\r\nmv \/ygopro-server\/* .\r\nmv \/ygopro-server\/.git* .\r\nmv \/ygopro-server\/.dockerignore .\r\nmkdir config plugins decks replays\r\ncp data\/default_config.json config\/config.json",
+            "container": "mycard\/ygopro-server:latest",
             "entrypoint": "bash"
         }
     },
