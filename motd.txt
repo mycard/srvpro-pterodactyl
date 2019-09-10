@@ -1,0 +1,14 @@
+欢迎使用 MyCard YGOPro 云计算服务。
+
+更新服务端请前往 https://minio.mycard.moe:9000/mycard/srvpro/ygopro-server.tar.gz 下载并上传解压在服务端根目录。
+
+使用 http 后台请前往 http://srvpro.ygo233.com/dashboard.html 进行操作。
+
+连接方式: HTTPS
+地址: srvpro.mycard.moe
+端口: 7925/$HOSTNAME
+用户名和密码请编辑 config/admin_user.json 文件进行设置，然后将 enable 字段改为 true 激活用户。
+
+其余配置文件请在 config/config.json 进行编辑。编辑完毕后重启服务器即可应用。
+
+先行卡/DIY卡等额外数据文件请放置在 ygopro/expansions 目录下，上传 cdb 文件和 script 目录即可，不需要上传卡图。
