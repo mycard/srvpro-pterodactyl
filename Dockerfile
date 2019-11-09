@@ -1,5 +1,5 @@
 # Dockerfile for SRVPro on YL
-FROM node:12-stretch-slim
+FROM node:12-buster-slim
 
 # apt
 #COPY sources.list /etc/apt/sources.list
