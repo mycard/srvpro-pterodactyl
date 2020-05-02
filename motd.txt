@@ -1,6 +1,6 @@
 欢迎使用 MyCard YGOPro 云计算服务。
 
-更新服务端请前往 https://minio.mycard.moe:9000/mycard/srvpro/ygopro-server.tar.gz 下载并上传解压在服务端根目录。
+更新服务端请前往 https://cdn01.moecube.com/srvpro/ygopro-server.tar.gz 下载并上传解压在服务端根目录。
 
 使用 http 后台请前往 http://srvpro.ygo233.com/dashboard.html 进行操作。
 
