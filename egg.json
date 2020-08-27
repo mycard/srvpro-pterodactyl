@@ -3,11 +3,11 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-09-07T12:43:11+00:00",
+    "exported_at": "2020-08-27T08:34:25+00:00",
     "name": "SRVPro",
-    "author": "unknown@unknown.com",
+    "author": "nanahira@momobako.com",
     "description": "A YGOPro Server.",
-    "image": "mycard\/srvpro-pterodactyl",
+    "image": "git-registry.mycard.moe\/mycard\/srvpro-pterodactyl",
     "startup": "node ygopro-server.js",
     "config": {
         "files": "{\r\n    \"config\/config.json\": {\r\n        \"parser\": \"json\",\r\n        \"find\": {\r\n            \"port\": \"{{server.build.default.port}}\",\r\n            \"modules.welcome\": \"{{env.WELCOME}}\",\r\n            \"modules.windbot.spawn\": true,\r\n            \"modules.http.port\": \"{{env.HTTP_PORT}}\"\r\n        }\r\n    }\r\n}",
@@ -18,7 +18,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\ncd \/mnt\/server\r\nmv \/ygopro-server\/* .\r\ncp data\/default_config.json config\/config.json",
-            "container": "mycard\/ygopro-server:latest",
+            "container": "git-registry.mycard.moe\/mycard\/srvpro:latest",
             "entrypoint": "bash"
         }
     },
