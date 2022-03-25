@@ -1,5 +1,5 @@
 # Dockerfile for SRVPro on Pterodactyl
-FROM node:12-buster-slim
+FROM node:16-bullseye-slim
 
 # apt
 RUN apt update && \
